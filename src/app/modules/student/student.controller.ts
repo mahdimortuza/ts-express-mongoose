@@ -8,8 +8,8 @@ const createStudent = async (req: Request, res: Response) => {
     const result = await StudentServices.createStudentIntoDB(studentData);
 
     res.status(200).json({
-      status: true,
-      message: 'student has created successfully.',
+      success: true,
+      message: 'student is created successfully.',
       data: result,
     });
   } catch (err) {
