@@ -6,6 +6,7 @@ const createStudentIntoDB = async (studentData: TStudent) => {
     throw new Error('user already exists');
   }
 
+  //creating static method
   const result = await Student.create(studentData); //built in static method
 
   // const student = new Student(studentData); // create an instance
