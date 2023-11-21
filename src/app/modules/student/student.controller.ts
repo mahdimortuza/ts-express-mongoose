@@ -11,7 +11,7 @@ const createStudent = async (req: Request, res: Response) => {
     //data validation using joi
     // const { value, error } = studentValidationSchema.validate(studentData);
 
-    //data validation using zod
+    //data validation using zod library
     const zodParsedData = studentValidationSchema.parse(studentData);
     const result = await StudentServices.createStudentIntoDB(zodParsedData);
 
